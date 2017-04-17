@@ -26,18 +26,30 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-	//Вариант 1
-	MyLinkedList myList = new MyLinkedList();
+	//Вариант 1 новый элемент вставляется перед существующим
+	MyLinkedList1 myList1 = new MyLinkedList1();
+	MyLinkedList2 myList2 = new MyLinkedList2();
 	Student st1= new Student (0,"Ivan",23);
 	Student st2= new Student (1,"Petr",21);
 	Student st3= new Student (2,"Igor",25);
 	Student st4= new Student (3,"Ivan",23);
-	myList.addEntry(st1);
-	myList.addEntry(st2);
-	myList.addEntry(st3);
-	myList.addEntry(st4);
-	myList.printList();
-	
+	myList1.addEntry(st1);
+	myList1.addEntry(st2);
+	myList1.addEntry(st3);
+	myList1.addEntry(st4);
+	myList1.findEntryId(3).printEntry();//поиск по Id и вывод найденного 
+	System.out.println("");
+	myList1.printList();
+	myList1.delEntryId(1);
+	myList1.printList();
+	//Вариант 2 новый элемент вставляется после существующего
+	System.out.println("Вариант 2 двусвязынй список");
+	myList2.addEntryLast(st1);
+	myList2.addEntryLast(st2);
+	myList2.addEntryLast(st3);
+	myList2.addEntryFirst(st4);
+	System.out.println("Всего в листе "+myList2.getSize()+" элемент(а)(ов)");
+	myList2.printList();
 	/*
 	//Set <Student> set = new HashSet <Student>();
 	Map <Student, Integer> map = new HashMap <Student, Integer>();

@@ -73,7 +73,7 @@ public boolean equals(Object obj) {
 
 @Override
 public String toString() {
-	return "Student [id=" + id + ", name=" + name + ", age=" + age + "]";
+	return "[id:"+id+", "+name + ", " + age + "]";
 }
 
 
