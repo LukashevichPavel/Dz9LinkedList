@@ -33,11 +33,12 @@ public class MyLinkedList2 {
 		size++;
 	}
 
-	public MyEntry delEntry(){
-		MyEntry tempEntry = lastEntry;
-		lastEntry=lastEntry.getLastEntry();
+	public Student delFirstEntry(){
+		Student temp = firstEntry.getStudent();
+		if(firstEntry.getNextEntry()==null){lastEntry=null;}
+		firstEntry=firstEntry.getNextEntry();
 		size--;
-		return tempEntry;
+		return temp;
 	}
 
 	public void printList(){
@@ -45,6 +46,7 @@ public class MyLinkedList2 {
 			System.out.println("Список пуст");
 		}
 		else{
+			System.out.println("Всего в листе "+getSize()+" элемент(а)(ов)");
 			System.out.println("Содержимое листа:");
 			MyEntry current = firstEntry;
 			while (current!=null){

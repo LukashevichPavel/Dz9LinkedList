@@ -37,18 +37,27 @@ public class Main {
 	myList1.addEntry(st2);
 	myList1.addEntry(st3);
 	myList1.addEntry(st4);
-	myList1.findEntryId(3).printEntry();//поиск по Id и вывод найденного 
+	int keyId=3;
+	System.out.println("Ищем студента с id "+keyId);
+	myList1.findEntryId(keyId).printEntry();//поиск по Id и вывод найденного 
 	System.out.println("");
 	myList1.printList();
+	System.out.println("Удаляем первого студента в списке");
+	myList1.delEntry();
+	myList1.printList();
+	keyId=1;
+	System.out.println("Удаляем студента с id "+keyId);
 	myList1.delEntryId(1);
 	myList1.printList();
 	//Вариант 2 новый элемент вставляется после существующего
+	System.out.println("");
 	System.out.println("Вариант 2 двусвязынй список");
 	myList2.addEntryLast(st1);
 	myList2.addEntryLast(st2);
 	myList2.addEntryLast(st3);
 	myList2.addEntryFirst(st4);
-	System.out.println("Всего в листе "+myList2.getSize()+" элемент(а)(ов)");
+	myList2.printList();
+	myList2.delFirstEntry();
 	myList2.printList();
 	/*
 	//Set <Student> set = new HashSet <Student>();
